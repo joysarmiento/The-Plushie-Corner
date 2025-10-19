@@ -21,30 +21,82 @@
 
 <body>
     <div id="container">
-        <header>
-            <a href="index.html">
-                <img src="images/creative-portfolio-logo.png" alt="Creative Portfolio Logo"/>
-            </a>
-        </header>
-
-        <nav>
+        <nav class="main-nav">
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Me</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="skills.html">Skills</a></li>
-                <li><a href="contact.html">Contact Me</a></li>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="order.html">Order Form</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
             </ul>
         </nav>
+
+        <header class="hero">
+            <h1>"Stories told through every loop"</h1>
+            <a href="index.html">
+                <img src="images/header-1.png" alt="The Plushie Corner"/>
+                <a href="shop.html" class="header-btn">Shop now</a>
+            </a>
+        </header>
         
         <main>
-            
+            <section id="featured">
+                <h2>Featured Products</h2>
+                <div class="product-grid">
+                    <div class="product">
+                        <img src="images/bear-plushies-5.jpg" alt="Urban Groove Plushie"/>
+                        <h3>Urban Groove Plushie</h3>
+                        <p>₱300</p>
+                    </div>
+                    <div class="product">
+                        <img src="images/limited-edition-2.jpg" alt="Ratatouille Plushie"/>
+                        <h3>Ratatouille Plushie</h3>
+                        <p>₱200</p>
+                    </div>
+                    <div class="product">
+                        <img src="images/bunny-plushies-8.jpg" alt="LoFi Bunny Plushie"/>
+                        <h3>LoFi Bunny Plushie</h3>
+                        <p>₱350</p>
+                    </div>
+                    <div class="product">
+                        <img src="images/limited-edition-4.jpg" alt="Teddy Plushie"/>
+                        <h3>Teddy Plushie</h3>
+                        <p>₱250</p>
+                    </div>
+                </div>
+                <a href="#shop" class="btn">View All</a>
+            </section>
+
+            <section id="story">
+                <h2>Maker's Story</h2>
+                <p>Hi, I'm Joy! I started crocheting plushies as a way to bring comfort to my friends—and now, to you. Each plush is stitched by hand, giving every bunny or bear its own personality. Whether you choose a classic or a limited edition, your plushie will always be one-of-a-kind.</p>
+            </section>
+
+            <section id="testimonials">
+                <h2>Sweet Words from Happy Customers</h2>
+                <div class="testimonials-grid">
+                    <blockquote>
+                        “The bunny I bought is now my daughter's bedtime buddy, and she won't go to sleep without it. The quality is amazing!”
+                        <cite>- Anna</cite>
+                    </blockquote>
+                    <blockquote>
+                        “As a huge Mr. Bean fan, I couldn't resist getting the Teddy plush. When it arrived, I laughed so hard because it was spot on—tiny details, adorable shape, and such a nostalgic piece. It's sturdy and well-stitched, yet still soft and huggable.”
+                        <cite>- Mark</cite>
+                    </blockquote>
+                    <blockquote>
+                        “My chick plush sits on my desk and makes me smile every day. I can tell it was made with love”
+                        <cite>- John</cite>
+                    </blockquote>
+                </div>
+            </section>
         </main>
 
         <footer>
-            <p>&copy; Copyright 2025. All Rights Reserved.</p>
-            <p>Created by <strong>Joy Sarmiento</strong></p>
-            <p><strong>Follow Me:</strong> <a href="https://www.linkedin.com/in/maria-anne-joy-sarmiento-650006378/">LinkedIn</a> | <a href="https://github.com/joysarmiento">GitHub</a> | <a href="mailto:sarmiento.joy0416@gmail.com">Email</a></p>
+            <p>&copy; 2025 The Plushie Corner. All Rights Reserved.</p>
+            <div class="social-links">
+                <a href="www.facebook.com/christructure"><img src="instagram-icon.png" alt="Instagram"></a>
+                <a href="www.instagram.com/christructure"><img src="facebook-icon.png" alt="Facebook"></a>
+            </div>
         </footer>
     </div>
 </body>
