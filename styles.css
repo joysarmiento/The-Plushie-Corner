@@ -1,0 +1,762 @@
+/* === Reset and Base === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Mali', cursive;
+    font-weight: 600;
+    background-color: #ece0d0;
+    color: #2c2727;
+}
+
+h1, h2, h3 {
+    font-family: "Luxurious Roman", serif;
+}
+
+/* === Container === */
+#container {
+    width: 100%;
+    overflow: hidden;
+}
+
+/* === Navigation Bar === */
+.main-nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    background: rgba(19, 27, 133, 0.15);
+    backdrop-filter: blur(12px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 60px;
+}
+
+/* --- Logo --- */
+.main-nav::before {
+    content: "";
+    display: inline-block;
+    background: url('images/plushie-corner-logo.png') no-repeat center center/contain;
+    width: 150px;
+    height: 50px;
+    margin-right: 20px;
+}
+
+/* --- Nav Links --- */
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 35px;
+}
+
+.main-nav a {
+    position: relative;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: color 0.3s ease;
+}
+
+/* --- Active / Hover Glow --- */
+.main-nav a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -4px;
+    transform: translateX(-50%) scaleX(0);
+    transform-origin: center;
+    width: 60%;
+    height: 3px;
+    background: linear-gradient(90deg, #ffb703, #fcbf49);
+    border-radius: 2px;
+    transition: transform 0.3s ease;
+}
+
+.main-nav a:hover::after,
+.main-nav a.active::after {
+    transform: translateX(-50%) scaleX(1);
+}
+
+.main-nav a:hover {
+    text-shadow: 1px 1px 15px rgba(252, 191, 73, 1);
+}
+
+/* === Hero Section === */
+.home-hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 100px;
+    background: url('images/header-1.png') no-repeat center center/cover;
+    position: relative;
+}
+
+/* --- Overlay for readability --- */
+.home-hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.25);
+}
+
+/* --- Hero Text --- */
+.home-hero-text {
+    position: relative;
+    max-width: 600px;
+    z-index: 1;
+}
+
+.home-hero-text h1 {
+    font-size: 3.5rem;
+    font-weight: 500;
+    color: #fff;
+    line-height: 1.3;
+    margin-bottom: 25px;
+    text-shadow: 7px 3px 3px rgba(7, 56, 92, 1);
+}
+
+/* === Hero Button === */
+.header-btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #003049;
+    color: #fff;
+    border-radius: 25px;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+
+.header-btn:hover {
+    text-shadow: 1px 1px 5px rgb(252, 191, 73, 1);
+    box-shadow: 1px 1px 20px rgba(252, 191, 73);
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+/* === FEATURED PRODUCTS === */
+#featured {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+#featured h2 {
+    font-size: 1.8rem;
+    color: #07385c;
+    margin-bottom: 20px;
+}
+
+.product-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-bottom: 20px;
+}
+
+.product {
+    text-align: center;
+    width: 210px;
+    padding: 15px;
+}
+
+.product.style-a img{
+    width: 100%;
+    border-bottom-left-radius: 55px;
+    border-top-right-radius: 55px;
+    border: 3.5px solid #89b11d;
+}
+
+.product.style-b img{
+    width: 100%;
+    border-top-left-radius: 55px;
+    border-top-right-radius: 55px;
+    border: 3.5px solid #225c16;
+}
+
+.product.style-c img{
+    width: 100%;
+    border-top-left-radius: 55px;
+    border-bottom-right-radius: 55px;
+    border: 3.5px solid #89b11d;
+}
+
+.product.style-a.border-style-a img {
+    border: 3.5px solid #225c16;
+}
+
+.product.style-b.border-style-b img {
+    border: 3.5px solid #89b11d;
+}
+
+.product h3 {
+    margin: 10px 0 5px;
+    font-size: 1rem;
+}
+
+.product p {
+    text-shadow: 1px 1px 10px rgba(137, 177, 29, 1);
+}
+
+.featured-btn {
+    display: inline-block;
+    background-color: #002b5b;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.featured-btn:hover {
+    background-color: #225c16;
+}
+
+/* === MAKER’S STORY === */
+#story h2{
+    padding-bottom: 20px;
+    text-align: left;
+}
+
+#story {
+    background: url('images/makers-story-background.png') no-repeat center center/cover;
+    font-size: 1rem;
+    color: #1f4516;
+    padding: 150px 20px;
+    position: relative;
+    text-align: center;
+}
+
+#story::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 40px;
+    margin: 0 40px;
+}
+
+#story h2, 
+#story p {
+    position: relative;
+    z-index: 1;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* === TESTIMONIALS === */
+#testimonials {
+    background: url('images/sweet-words-background.png') no-repeat center center/cover;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+#testimonials h2 {
+    font-size: 1.8rem;
+    color: #07385c;
+    background-color:  #ece0d0;
+    display: inline-block;
+    padding: 0px 10px;
+    border-radius: 30px;
+}
+
+.testimonials-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 35px;
+    margin-top: 30px;
+    align-items: center;
+}
+
+blockquote {
+    background-color: #c4d88A;
+    border-radius: 15px;
+    border: 3.5px solid #225c16;
+    padding: 20px;
+    width: 280px;
+    font-size: 1rem;
+    line-height: 1.5;
+    font-style: italic;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+
+blockquote:nth-child(1), 
+blockquote:nth-child(3) {
+    width: 230px;
+    height: 220px;
+}
+
+cite {
+    display: block;
+    margin-top: 10px;
+    text-align: right;
+    color: #333;
+}
+
+/* === ABOUT: Intro === */
+#intro {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 100px;
+    padding-bottom: 15px;
+    padding-left: 50px;
+    gap: 10px;
+    color: #1f4516;
+    text-shadow: 7px 3px 3px rgba(196, 216, 138, 1);
+    line-height: 1.5;
+    position: relative;
+}
+
+.intro-text {
+    width: 60%;
+}
+
+.intro-text h1 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.intro-image {
+    width: 35%;
+}
+
+.intro-image img {
+    width: 100%;
+    max-width: 400px;
+}
+
+/* === ABOUT: Behind the Scenes === */
+#behind {
+    position: relative;
+    padding: 3rem 2rem;
+    background: url('images/behind-the-scenes-background.png') center top no-repeat;
+    background-size: cover;
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    background-position: center top;
+    z-index: 2;
+    margin-bottom: -30px;
+}
+
+/* Row Styles */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+}
+
+/* Column Styles */
+.column {
+    flex: 1 1 50%;
+    max-width: 50%;
+    box-sizing: border-box;
+    padding: 0.5rem;
+}
+
+/* Image Styles */
+.column img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+/* Text Block */
+.behind-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.behind-text h2 {
+    color: #07385c;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px 10px rgba(255, 255, 255, 1);
+  
+}
+
+.behind-text p {
+    color: #fff;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* === ABOUT: Mission and Values === */
+#mission-values {
+    background: url('images/mission-and-values-background.png') no-repeat center center/cover;
+    padding: 80px 20px;
+    text-align: center;
+    z-index: 1;
+}
+
+#mission-values h2 {
+    font-size: 1.8rem;
+    color: #07385c;
+    background-color:  #ece0d0;
+    display: inline-block;
+    padding: 0px 10px;
+    border-radius: 30px;
+}
+
+.mission-values-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 35px;
+    margin-top: 30px;
+}
+
+.value {
+    flex: 1 1 280px;
+    max-width: 250px;
+    min-height: 220px;
+    background-color: #c4d88A;
+    border-radius: 15px;
+    border: 3.5px solid #225c16;
+    padding: 20px;
+    font-size: 1rem;
+    line-height: 1.5;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+/* === SHOP === */
+#shop-header {
+    text-align: center;
+    padding-top: 7rem;
+    padding-bottom: 2rem;
+}
+
+#shop-header h1 {
+    font-size: 2.5rem;
+    color: #07385c;
+    margin-bottom: 0.5rem;
+}
+
+.category-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1.8rem;
+}
+
+.category-nav a {
+    text-decoration: none;
+    color: #07385c;
+    font-size: 1rem;
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+.category-nav a:hover {
+    color: #5a8bb1;
+    text-decoration: underline;
+}
+
+#limited,
+#bunny,
+#bear {
+    padding: 20px 20px;
+    text-align: center;
+}
+
+#limited h2,
+#bunny h2,
+#bear h2 {
+    font-size: 1.8rem;
+    color: #07385c;
+    margin-bottom: 10px;
+}
+
+#limited .product,
+#bunny .product,
+#bear .product {
+    text-align: left;
+    width: 210px;
+    padding: 15px;
+}
+
+.product.style-a.border-style-b img {
+    border: 3.5px solid #89b11d;
+}
+
+.product.style-c.border-style-a img {
+    border: 3.5px solid #225c16;
+}
+
+.product .btn {
+    display: block;
+    width: 100%;
+    padding: 5px 0;
+    margin-top: 8px;
+    border-radius: 5px;
+    background-color: #002b5b;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease;
+}
+
+.product .btn:hover {
+    background-color: #225c16;
+}
+
+/* === ORDER: hero === */
+.hero {
+    background: url('images/header-2.png') no-repeat center center/cover;
+    color: white;
+    padding: 8rem 6.25rem 5rem 6.25rem;
+    position: relative;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.25);
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    font-weight: 500;
+    color: #fff;
+    line-height: 1.3;
+    margin-bottom: 5px;
+    text-shadow: 7px 3px 3px rgba(7, 56, 92, 1);
+    position: relative;
+    z-index: 1;
+}
+
+.hero p {
+    font-size: 1rem;
+    max-width: 500px;
+    margin: 0;
+    padding: 0.5rem 0.5rem;
+    line-height: 1.5;
+    position: relative;
+    z-index: 1;
+}
+
+/* ===== ORDER: Notes ===== */
+#notes {
+    text-align: center;
+    padding: 2rem 6rem;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+#notes h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+#notes ul {
+    text-align: left;
+    list-style-type: disc;
+    display: inline-block;
+    margin: 0 auto;
+    padding-left: 2rem;
+    max-width: 100%;
+    color: #333;
+}
+
+/* ===== Form Styles ===== */
+form#order-form {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #fff8ef;
+    border-radius: 10px;
+}
+
+form h3 {
+    font-size: 1.5rem;
+    color: #1a2d4f;
+    margin-top: 0.1rem;
+    margin-bottom: 1rem;
+}
+
+/* Input & Textarea */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: none;
+    border-radius: 10px;
+    background-color: #7a9630;
+    color: white;
+    font-size: 0.9rem;
+    font-family: 'Mali', cursive;
+    font-weight: 400;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: white;
+    opacity: 0.9;
+}
+
+/* Two Columns */
+.two-columns {
+    display: flex;
+    gap: 1rem;
+}
+
+.two-columns input {
+    flex: 1;
+}
+
+/* Checkboxes Section */
+.formRow fieldset {
+    border: 2px solid #7a9630;
+    padding: 1.5rem;
+    margin-bottom: 1.1rem;
+    border-radius: 8px;
+    line-height: 0.8rem;
+    background-color: #f1f1e6;
+}
+
+.formRow legend {
+    font-weight: bold;
+    color: #4a642f;
+}
+
+.formRow label {
+    display: block;
+    margin: 0.5rem 0;
+}
+
+/* Quantity Input */
+.quantity-input-container {
+    margin-bottom: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.quantity-input-container label {
+    font-weight: 600;
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Wrap the buttons and input */
+.quantity-controls {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Style the +/- buttons */
+.minus-button,
+.plus-button {
+    background-color: #ccc;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+.minus-button:hover,
+.plus-button:hover {
+    background-color: #aaa;
+}
+
+/* Style the input itself */
+.quantity-input {
+    width: 20px;
+    text-align: center;
+    padding: 0.3rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Textarea */
+.textarea-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    margin-bottom: 1.3rem;
+}
+
+.textarea-container label {
+    font-weight: 600;
+    font-size: 1rem;
+    color: #333;
+}
+
+.textarea-container textarea {
+    width: 100%;
+    max-width: 800px;
+    min-height: 120px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    resize: vertical;
+}
+
+/* Submit Button */
+button[type="submit"] {
+    background-color: #3f5e29;
+    color: white;
+    font-size: 1rem;
+    font-family: 'Mali', cursive;
+    font-weight: 600;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 15px;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #2d4b1a;
+}
+
+/* === FOOTER === */
+footer {
+    background-color: #07385c;
+    text-align: center;
+    padding: 25px;
+}
+
+footer p {
+    font-size: 0.75em;
+    text-align: center;
+    color: #fff;
+    padding: 0.1em;
+}
