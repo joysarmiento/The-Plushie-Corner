@@ -1,20 +1,63 @@
-/* === Reset and Base === */
+:root {
+    /* Brand Colors */
+    --color-blue: #07385c;
+    --color-yellow: #ffb703;
+    --color-yellow-light: #fcbf49;
+    --color-green-light: #89b11d;
+    --color-green-dark: #225c16;
+    --color-accent-olive: #7a9630;
+    --color-accent-darkgreen: #3f5e29;
+
+    /* Background Colors */
+    --color-bg: #ece0d0;
+    --color-bg-box: #c4d88A;
+
+    /* Text Colors */
+    --color-text-dark: #2c2727;
+    --color-text-white: #fff;
+
+    /* Shadows */
+    --color-shadow-text-blue: rgba(7, 56, 92, 1);
+    --color-shadow-text-yellow: rgba(252, 191, 73, 1);
+    --color-shadow-text-green: rgba(137, 177, 29, 0.7);
+    --color-shadow-black: rgba(0, 0, 0, 0.2);
+}
+
+/* === CSS Reset === */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* === CSS styles for body and headings === */
 body {
     font-family: 'Mali', cursive;
     font-weight: 600;
-    background-color: #ece0d0;
-    color: #2c2727;
+    background-color: var(--color-bg);
+    color: var(--color-text-dark);
 }
 
 h1, h2, h3 {
     font-family: "Luxurious Roman", serif;
 }
+
+/* ====================================================================== */
+/* STYLE RULES FOR MOBILE VIEWPORT */
+/* Show mobile class, hide tablet-desktop class */
+
+
+/* ====================================================================== */
+/* STYLE RULES FOR TABLET VIEWPORT */
+/* Tablet Viewport: Show tablet-desktop class, hide mobile class */
+
+
+/* ====================================================================== */
+/* MEDIA QUERY FOR DESKTOP VIEWPORT */
+
+
+/* ====================================================================== */
+/* MEDIA QUERY FOR PRINT */
 
 /* === Container === */
 #container {
@@ -36,7 +79,6 @@ h1, h2, h3 {
     padding: 10px 60px;
 }
 
-/* --- Logo --- */
 .main-nav::before {
     content: "";
     display: inline-block;
@@ -46,17 +88,16 @@ h1, h2, h3 {
     margin-right: 20px;
 }
 
-/* --- Nav Links --- */
 .main-nav ul {
     list-style: none;
     display: flex;
-    gap: 35px;
+    gap: 25px;
 }
 
 .main-nav a {
     position: relative;
     text-decoration: none;
-    color: #fff;
+    color: var(--color-text-white);
     font-weight: 600;
     padding: 8px 16px;
     border-radius: 20px;
@@ -119,18 +160,18 @@ h1, h2, h3 {
 .home-hero-text h1 {
     font-size: 3.5rem;
     font-weight: 500;
-    color: #fff;
+    color: var(--color-text-white);
     line-height: 1.3;
     margin-bottom: 25px;
-    text-shadow: 7px 3px 3px rgba(7, 56, 92, 1);
+    text-shadow: 7px 3px 3px var(--color-shadow-text-blue);
 }
 
 /* === Hero Button === */
 .header-btn {
     display: inline-block;
     padding: 12px 30px;
-    background-color: #003049;
-    color: #fff;
+    background-color: var(--color-blue);
+    color: var(--color-text-white);
     border-radius: 25px;
     font-weight: 600;
     text-decoration: none;
@@ -139,9 +180,9 @@ h1, h2, h3 {
 }
 
 .header-btn:hover {
-    text-shadow: 1px 1px 5px rgb(252, 191, 73, 1);
-    box-shadow: 1px 1px 20px rgba(252, 191, 73);
-    color: #fff;
+    text-shadow: 1px 1px 5px var(--color-shadow-text-yellow);
+    box-shadow: 1px 1px 20px var(--color-shadow-text-yellow);
+    color: var(--color-text-white);
     transform: translateY(-2px);
 }
 
@@ -153,7 +194,7 @@ h1, h2, h3 {
 
 #featured h2 {
     font-size: 1.8rem;
-    color: #07385c;
+    color: var(--color-blue);
     margin-bottom: 20px;
 }
 
@@ -175,29 +216,29 @@ h1, h2, h3 {
     width: 100%;
     border-bottom-left-radius: 55px;
     border-top-right-radius: 55px;
-    border: 3.5px solid #89b11d;
+    border: 3.5px solid var(--color-green-light);
 }
 
 .product.style-b img{
     width: 100%;
     border-top-left-radius: 55px;
     border-top-right-radius: 55px;
-    border: 3.5px solid #225c16;
+    border: 3.5px solid var(--color-green-dark);
 }
 
 .product.style-c img{
     width: 100%;
     border-top-left-radius: 55px;
     border-bottom-right-radius: 55px;
-    border: 3.5px solid #89b11d;
+    border: 3.5px solid var(--color-green-light);
 }
 
 .product.style-a.border-style-a img {
-    border: 3.5px solid #225c16;
+    border: 3.5px solid var(--color-green-dark);
 }
 
 .product.style-b.border-style-b img {
-    border: 3.5px solid #89b11d;
+    border: 3.5px solid var(--color-green-light);
 }
 
 .product h3 {
@@ -206,13 +247,13 @@ h1, h2, h3 {
 }
 
 .product p {
-    text-shadow: 1px 1px 10px rgba(137, 177, 29, 1);
+    text-shadow: 1px 1px 10px var(--color-shadow-text-green);
 }
 
 .featured-btn {
     display: inline-block;
-    background-color: #002b5b;
-    color: white;
+    background-color: var(--color-blue);
+    color: var(--color-text-white);
     padding: 12px 30px;
     border-radius: 25px;
     text-decoration: none;
@@ -220,7 +261,7 @@ h1, h2, h3 {
 }
 
 .featured-btn:hover {
-    background-color: #225c16;
+    background-color: var(--color-green-dark);
 }
 
 /* === MAKER’S STORY === */
@@ -263,8 +304,8 @@ h1, h2, h3 {
 
 #testimonials h2 {
     font-size: 1.8rem;
-    color: #07385c;
-    background-color:  #ece0d0;
+    color: var(--color-blue);
+    background-color:  var(--color-bg);
     display: inline-block;
     padding: 0px 10px;
     border-radius: 30px;
@@ -280,9 +321,9 @@ h1, h2, h3 {
 }
 
 blockquote {
-    background-color: #c4d88A;
+    background-color: var(--color-bg-box);
     border-radius: 15px;
-    border: 3.5px solid #225c16;
+    border: 3.5px solid var(--color-green-dark);
     padding: 20px;
     width: 280px;
     font-size: 1rem;
@@ -301,7 +342,6 @@ cite {
     display: block;
     margin-top: 10px;
     text-align: right;
-    color: #333;
 }
 
 /* === ABOUT: Intro === */
@@ -370,7 +410,7 @@ cite {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 6px 12px var(--color-shadow-black);
     transition: transform 0.3s ease;
 }
 
@@ -383,7 +423,7 @@ cite {
 }
 
 .behind-text h2 {
-    color: #07385c;
+    color: var(--color-blue);
     font-size: 1.8rem;
     margin-bottom: 1rem;
     text-shadow: 1px 1px 10px rgba(255, 255, 255, 1);
@@ -391,7 +431,7 @@ cite {
 }
 
 .behind-text p {
-    color: #fff;
+    color: var(--color-text-white);
     font-size: 1rem;
     line-height: 1.6;
 }
@@ -406,8 +446,8 @@ cite {
 
 #mission-values h2 {
     font-size: 1.8rem;
-    color: #07385c;
-    background-color:  #ece0d0;
+    color: var(--color-blue);
+    background-color:  var(--color-bg);
     display: inline-block;
     padding: 0px 10px;
     border-radius: 30px;
@@ -425,9 +465,9 @@ cite {
     flex: 1 1 280px;
     max-width: 250px;
     min-height: 220px;
-    background-color: #c4d88A;
+    background-color: var(--color-bg-box);
     border-radius: 15px;
-    border: 3.5px solid #225c16;
+    border: 3.5px solid var(--color-green-dark);
     padding: 20px;
     font-size: 1rem;
     line-height: 1.5;
@@ -449,7 +489,7 @@ cite {
 
 #shop-header h1 {
     font-size: 2.5rem;
-    color: #07385c;
+    color: var(--color-blue);
     margin-bottom: 0.5rem;
 }
 
@@ -464,7 +504,7 @@ cite {
 
 .category-nav a {
     text-decoration: none;
-    color: #07385c;
+    color: var(--color-blue);
     font-size: 1rem;
     font-weight: 700;
     transition: color 0.3s ease;
@@ -486,7 +526,7 @@ cite {
 #bunny h2,
 #bear h2 {
     font-size: 1.8rem;
-    color: #07385c;
+    color: var(--color-blue);
     margin-bottom: 10px;
 }
 
@@ -499,11 +539,11 @@ cite {
 }
 
 .product.style-a.border-style-b img {
-    border: 3.5px solid #89b11d;
+    border: 3.5px solid var(--color-green-light);
 }
 
 .product.style-c.border-style-a img {
-    border: 3.5px solid #225c16;
+    border: 3.5px solid var(--color-green-dark);
 }
 
 .product .btn {
@@ -512,8 +552,8 @@ cite {
     padding: 5px 0;
     margin-top: 8px;
     border-radius: 5px;
-    background-color: #002b5b;
-    color: white;
+    background-color: var(--color-blue);
+    color: var(--color-text-white);
     text-align: center;
     text-decoration: none;
     box-sizing: border-box;
@@ -521,13 +561,13 @@ cite {
 }
 
 .product .btn:hover {
-    background-color: #225c16;
+    background-color: var(--color-green-dark);
 }
 
 /* === ORDER: hero === */
 .hero {
     background: url('images/header-2.png') no-repeat center center/cover;
-    color: white;
+    color: var(--color-text-white);
     padding: 8rem 6.25rem 5rem 6.25rem;
     position: relative;
 }
@@ -545,10 +585,10 @@ cite {
 .hero h1 {
     font-size: 3.5rem;
     font-weight: 500;
-    color: #fff;
+    color: var(--color-text-white);
     line-height: 1.3;
     margin-bottom: 5px;
-    text-shadow: 7px 3px 3px rgba(7, 56, 92, 1);
+    text-shadow: 7px 3px 3px var(--color-shadow-text-blue);
     position: relative;
     z-index: 1;
 }
@@ -573,7 +613,14 @@ cite {
 
 #notes h2 {
     font-size: 2rem;
+    margin-bottom: 0.1rem;
+    color: var(--color-blue);
+}
+
+#notes p {
+    font-size: 1rem;
     margin-bottom: 1rem;
+    color: var(--color-blue);
 }
 
 #notes ul {
@@ -583,7 +630,8 @@ cite {
     margin: 0 auto;
     padding-left: 2rem;
     max-width: 100%;
-    color: #333;
+    color: var(--color-green-dark);
+    text-shadow: 2px 1px 3px var(--color-shadow-text-green);
 }
 
 /* ===== Form Styles ===== */
@@ -597,7 +645,7 @@ form#order-form {
 
 form h3 {
     font-size: 1.5rem;
-    color: #1a2d4f;
+    color: var(--color-blue);
     margin-top: 0.1rem;
     margin-bottom: 1rem;
 }
@@ -613,8 +661,8 @@ textarea {
     margin-bottom: 1rem;
     border: none;
     border-radius: 10px;
-    background-color: #7a9630;
-    color: white;
+    background-color: var(--color-accent-olive);
+    color: var(--color-text-white);
     font-size: 0.9rem;
     font-family: 'Mali', cursive;
     font-weight: 400;
@@ -622,7 +670,7 @@ textarea {
 
 input::placeholder,
 textarea::placeholder {
-    color: white;
+    color: var(--color-text-white);
     opacity: 0.9;
 }
 
@@ -638,7 +686,7 @@ textarea::placeholder {
 
 /* Checkboxes Section */
 .formRow fieldset {
-    border: 2px solid #7a9630;
+    border: 2px solid var(--color-accent-olive);
     padding: 1.5rem;
     margin-bottom: 1.1rem;
     border-radius: 8px;
@@ -648,7 +696,7 @@ textarea::placeholder {
 
 .formRow legend {
     font-weight: bold;
-    color: #4a642f;
+    color: var(--color-accent-olive);
 }
 
 .formRow label {
@@ -667,7 +715,6 @@ textarea::placeholder {
 .quantity-input-container label {
     font-weight: 600;
     font-size: 1rem;
-    color: #333;
 }
 
 /* Wrap the buttons and input */
@@ -680,7 +727,8 @@ textarea::placeholder {
 /* Style the +/- buttons */
 .minus-button,
 .plus-button {
-    background-color: #ccc;
+    background-color: var(--color-accent-darkgreen);
+    color: var(--color-text-white);
     border: none;
     padding: 0.5rem 1rem;
     font-size: 1.2rem;
@@ -691,7 +739,7 @@ textarea::placeholder {
 
 .minus-button:hover,
 .plus-button:hover {
-    background-color: #aaa;
+    background-color: var(--color-green-dark);
 }
 
 /* Style the input itself */
@@ -700,7 +748,7 @@ textarea::placeholder {
     text-align: center;
     padding: 0.3rem;
     font-size: 1rem;
-    border: 1px solid #ccc;
+    border: 1px solid var(--color-accent-darkgreen);
     border-radius: 4px;
 }
 
@@ -716,22 +764,20 @@ textarea::placeholder {
 .textarea-container label {
     font-weight: 600;
     font-size: 1rem;
-    color: #333;
 }
 
 .textarea-container textarea {
     width: 100%;
     max-width: 800px;
     min-height: 120px;
-    border: 1px solid #ccc;
     border-radius: 8px;
     resize: vertical;
 }
 
 /* Submit Button */
 button[type="submit"] {
-    background-color: #3f5e29;
-    color: white;
+    background-color: var(--color-accent-darkgreen);
+    color: var(--color-text-white);
     font-size: 1rem;
     font-family: 'Mali', cursive;
     font-weight: 600;
@@ -744,12 +790,118 @@ button[type="submit"] {
 }
 
 button[type="submit"]:hover {
-    background-color: #2d4b1a;
+    background-color: var(--color-green-dark);
+}
+
+/* === CONTACT === */
+/* ===== Availability Table ===== */
+.availability {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px var(--color-shadow-black);
+    background: linear-gradient(135deg, #fef6e4, #e7f6ec);
+}
+
+.availability h2 {
+    color: var(--color-blue);
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.availability p {
+    color: var(--color-green-dark);
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+}
+
+.availability table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1rem;
+    background: linear-gradient(135deg, #f5e9d3, #fef9f4);
+    overflow: hidden;
+}
+
+.availability th,
+.availability td {
+    padding: 1rem;
+    border: 1px solid var(--color-green-dark);
+    text-align: center;
+}
+
+.availability thead {
+    background-color: var(--color-accent-olive);
+    color: var(--color-text-white);
+}
+
+.availability tbody tr:nth-child(even) {
+    background-color: #f1f1e6;
+}
+
+.availability tbody td {
+    color: var(--color-blue);
+    font-weight: 500;
+}
+
+/* ===== Contact Info Section ===== */
+.contact-info {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin: 3rem auto;
+    padding: 2rem;
+}
+
+.info-box {
+    background-color: var(--color-blue);
+    color: var(--color-text-white);
+    padding: 1.5rem;
+    border-radius: 10px;
+    font-size: 1rem;
+    text-align: center;
+    width: 250px;
+    line-height: 1.6;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px var(--color-shadow-black);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    word-break: break-word;
+}
+
+.info-box img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
+.info-box:hover {
+    transform: translateY(-4px);
+    background-color: var(--color-green-dark);
+}
+
+.info-box a {
+    color: var(--color-text-white);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+    word-break: break-word;
+    text-align: center;
+}
+
+.info-box a:hover {
+    text-decoration: underline;
+    color: var(--color-text-white);
 }
 
 /* === FOOTER === */
 footer {
-    background-color: #07385c;
+    background-color: var(--color-blue);
     text-align: center;
     padding: 25px;
 }
@@ -757,6 +909,6 @@ footer {
 footer p {
     font-size: 0.75em;
     text-align: center;
-    color: #fff;
+    color: var(--color-text-white);
     padding: 0.1em;
 }
