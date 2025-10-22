@@ -30,9 +30,7 @@ body, div, nav, header, main, h1, h2, h3, h4, p, figure, figcaption, blockquote 
     border: 0;
 }
 
-
 * {
-    
     box-sizing: border-box;
 }
 
@@ -69,7 +67,7 @@ h1, h2, h3 {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 12px 80px;
+    padding: 1px 80px;
     animation: navBounce 1s ease-out forwards;
 }
 
@@ -286,6 +284,48 @@ figure.product {
     padding-bottom: 20px;
     text-align: left;
     font-size: 2.2rem;
+}
+
+/* DESKTOP VIEWPORT | HOME: CSS styles for maker video */
+#maker-video {
+    padding: 80px 20px;
+    text-align: center;
+    background-color: #fff8ef;
+    border-top: 4px solid var(--color-green-dark);
+    border-bottom: 4px solid var(--color-green-dark);
+}
+
+#maker-video h2 {
+    font-size: 2.2rem;
+    color: var(--color-blue);
+    margin-bottom: 30px;
+}
+
+#maker-video video {
+    width: 320px;
+    height: auto;
+    border-radius: 25px;
+    border: 4px solid var(--color-green-light);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#maker-video .video-caption {
+    margin-top: 15px;
+    font-size: 1rem;
+    color: var(--color-green-dark);
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+}
+
+img, video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* DESKTOP VIEWPORT  |  HOME: CSS styles for testimonials */
@@ -932,7 +972,32 @@ footer p {
     font-size: 0.75em;
     text-align: center;
     color: var(--color-text-white);
-    padding: 0.1em;
+    padding: 1em;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-links a img {
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    padding: 4px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.social-links a img:hover {
+    transform: scale(1.1);
+    opacity: 0.9;
+}
+
+.social-links a {
+    display: inline-block;
 }
 
 /* ====================================================================== */
@@ -941,7 +1006,7 @@ footer p {
 /* ---------------------------------------------------------------------- */
 /* TABLET VIEWPORT  |  HOME: CSS styles for nav */
     .main-nav {
-        padding: 10px 20px;
+        padding: 1px 20px;
     }
 
     .main-nav img {
@@ -953,7 +1018,7 @@ footer p {
     }
 
     .main-nav a {
-        padding: 8px 9px;
+        padding: 5px 9px;
         font-size: 1rem;
     }
 
@@ -1009,6 +1074,19 @@ footer p {
         max-width: 600px;
         padding-bottom: 13px;
         font-size: 1.5rem;
+    }
+
+/* TABLET VIEWPORT | HOME: CSS styles for maker video */
+    #maker-video {
+        padding: 50px 20px;
+    }
+
+    #maker-video h2 {
+        font-size: 1.8rem ;
+    }
+
+    #maker-video video {
+        width: 290px;
     }
 
 /* TABLET VIEWPORT  |  HOME: CSS styles for testimonials */
@@ -1241,7 +1319,7 @@ footer p {
     .main-nav {
         background: none;
         backdrop-filter: none;
-        padding: 15px 8px;
+        padding: 1px 20px;
     }
 
     .main-nav img {
@@ -1263,7 +1341,7 @@ footer p {
         backdrop-filter: blur(12px);
         border-radius: 12px;
         padding: 4px;
-        margin-right: 15px;
+        margin-right: 10px;
     }
 
     .hamburger span {
@@ -1437,6 +1515,19 @@ footer p {
         max-width: 440px;
         font-size: 0.9rem;
         line-height: 1.2;
+    }
+
+/* TABLET VIEWPORT | HOME: CSS styles for maker video */
+    #maker-video {
+        padding: 60px 20px;
+    }
+
+    #maker-video h2 {
+        font-size: 1.5rem ;
+    }
+
+    #maker-video video {
+        width: 250px;
     }
 
 /* MOBILE VIEWPORT  |  HOME: CSS styles for testimonials */
