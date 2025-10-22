@@ -619,13 +619,14 @@ cite {
     width: 100%;
     height: auto;
     position: relative;
-    background: url('images/header-2.png') no-repeat center center;
+    aspect-ratio: 16 / 9;
+    background: url('images/header-1.png') no-repeat center center;
     background-size: cover;
     color: var(--color-text-white);
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    padding: 12.5vw 6vw;
+    padding: 22vw 6vw;
 }
 
 .hero::before {
