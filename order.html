@@ -9,6 +9,7 @@
     -->
     <title>The Plushie Corner</title>
     <meta charset="utf-8" />
+    <meta name="description" content="Place your order at The Plushie Corner! Fill out our easy order form to get your handmade crochet plushies — bunnies, bears, and limited editions — crafted with love and care." />
     <link rel="stylesheet" href="styles.css" type="text/css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://fonts.googleapis.com/css2?family=Mali:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
@@ -60,85 +61,88 @@
             </ul>
         </section>
 
-        <form id="order-form" action="YOUR_SCRIPT_LINK_HERE" method="POST">
+        <form id="order-form" action="https://formspree.io/f/xblzvljp" method="POST">
             <h3>Customer Info</h3>
-            <input type="text" placeholder="First Name" required>
-            <input type="text" placeholder="Last Name" required>
+            <input type="text" name="first_name" placeholder="First Name" required>
+            <input type="text" name="last_name" placeholder="Last Name" required>
             
             <div class="two-columns">
-                <input type="email" placeholder="Email" required>
-                <input type="tel" placeholder="Phone Number" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="tel" name="phone_number" placeholder="Phone Number" required>
             </div>
 
             <h3>Order Details</h3>
             <div class="formRow"> 
                 <label>Choose your plushie order (select all that apply):</label>
+                
                 <fieldset>
-                    <legend><strong>Limited Edition</strong></legend>
-                    <label><input type="checkbox" name="order" value="Brown Cow Plushie"> Brown Cow Plushie</label><br>
-                    <label><input type="checkbox" name="order" value="Ratatouille Plushie"> Ratatouille Plushie</label><br>
-                    <label><input type="checkbox" name="order" value="Totoro Plushie"> Totoro Plushie</label><br>
-                    <label><input type="checkbox" name="order" value="Teddy Plushie"> Teddy Plushie</label>
+                    <legend>Limited Edition</legend>
+                    <label><input type="checkbox" name="order[]" value="Brown Cow Plushie"> Brown Cow Plushie</label><br>
+                    <label><input type="checkbox" name="order[]" value="Ratatouille Plushie"> Ratatouille Plushie</label><br>
+                    <label><input type="checkbox" name="order[]" value="Totoro Plushie"> Totoro Plushie</label><br>
+                    <label><input type="checkbox" name="order[]" value="Teddy Plushie"> Teddy Plushie</label>
                 </fieldset>
 
                 <fieldset>
-                    <legend><strong>Bunny Plushies</strong></legend>
-                    <label><input type="checkbox" name="order" value="HoneyBun Plushie"> HoneyBun Plushie</label><br>
-                    <label><input type="checkbox" name="order" value="Poppy Plushie"> Poppy Plushie</label><br>
-                    <label><input type="checkbox" name="order" value="Froggie Hops Plushie"> Froggie Hops Plushie</label><br>
-                    <label><input type="checkbox" name="order" value="SnuggleCub Plushie"> SnuggleCub Plushie</label><br>
-                    <label><input type="checkbox" name="order" value="Moonlight Plushie"> Moonlight Plushie</label><br>
-                    <label><input type="checkbox" name="order" value="Pearl Bunny Plushie"> Pearl Bunny Plushie</label><br>
-                    <label><input type="checkbox" name="order" value="FinBunny Plushie"> FinBunny Plushie</label><br>
-                    <label><input type="checkbox" name="order" value="LoFi Bunny Plushie"> LoFi Bunny Plushie</label>
+                    <legend>Bunny Plushies</legend>
+                    <label><input type="checkbox" name="order[]" value="HoneyBun Plushie"> HoneyBun Plushie</label><br>
+                    <label><input type="checkbox" name="order[]" value="Poppy Plushie"> Poppy Plushie</label><br>
+                    <label><input type="checkbox" name="order[]" value="Froggie Hops Plushie"> Froggie Hops Plushie</label><br>
+                    <label><input type="checkbox" name="order[]" value="SnuggleCub Plushie"> SnuggleCub Plushie</label><br>
+                    <label><input type="checkbox" name="order[]" value="Moonlight Plushie"> Moonlight Plushie</label><br>
+                    <label><input type="checkbox" name="order[]" value="Pearl Bunny Plushie"> Pearl Bunny Plushie</label><br>
+                    <label><input type="checkbox" name="order[]" value="FinBunny Plushie"> FinBunny Plushie</label><br>
+                    <label><input type="checkbox" name="order[]" value="LoFi Bunny Plushie"> LoFi Bunny Plushie</label>
                 </fieldset>
 
                 <fieldset>
-                    <legend><strong>Bear Plushies</strong></legend>
-                    <label><input type="checkbox" name="order" value="SonicHug Plushie"> SonicHug Plushie</label><br>
-                    <label><input type="checkbox" name="order" value="Sunny Plushie"> Sunny Plushie</label><br>
-                    <label><input type="checkbox" name="order" value="GlazyBear Plushie"> GlazyBear Plushie</label><br>
-                    <label><input type="checkbox" name="order" value="Blush Bow Plushie"> Blush Bow Plushie</label><br>
-                    <label><input type="checkbox" name="order" value="Urban Groove Plushie"> Urban Groove Plushie</label><br>
-                    <label><input type="checkbox" name="order" value="MilkChoco Plushie" class="print"> MilkChoco Plushie</label><br>
-                    <label><input type="checkbox" name="order" value="SnowTie Plushie"> SnowTie Plushie</label><br>
-                    <label><input type="checkbox" name="order" value="Moon & Tide Plushie"> Moon & Tide Plushie</label>
+                    <legend>Bear Plushies</legend>
+                    <label><input type="checkbox" name="order[]" value="SonicHug Plushie"> SonicHug Plushie</label><br>
+                    <label><input type="checkbox" name="order[]" value="Sunny Plushie"> Sunny Plushie</label><br>
+                    <label><input type="checkbox" name="order[]" value="GlazyBear Plushie"> GlazyBear Plushie</label><br>
+                    <label><input type="checkbox" name="order[]" value="Blush Bow Plushie"> Blush Bow Plushie</label><br>
+                    <label><input type="checkbox" name="order[]" value="Urban Groove Plushie"> Urban Groove Plushie</label><br>
+                    <label><input type="checkbox" name="order[]" value="MilkChoco Plushie"> MilkChoco Plushie</label><br>
+                    <label><input type="checkbox" name="order[]" value="SnowTie Plushie"> SnowTie Plushie</label><br>
+                    <label><input type="checkbox" name="order[]" value="Moon & Tide Plushie"> Moon & Tide Plushie</label>
                 </fieldset>
             </div>
+
             <div class="quantity-input-container">
                 <label for="product_quantity">Quantity for each plushie:</label>
                 <div class="quantity-controls">
                     <button type="button" class="minus-button" aria-label="Decrease quantity">&minus;</button>
-                    <input type="number" class="quantity-input" value="1" min="1" max="50" name="product_quantity">
+                    <input type="number" id="product_quantity" name="product_quantity" class="quantity-input" value="1" min="1" max="50">
                     <button type="button" class="plus-button" aria-label="Increase quantity">&plus;</button>
                 </div>
             </div>
+
             <div class="textarea-container">
                 <label for="order_notes">Special Instructions:</label>
-                <textarea id="order_notes" name="order_notes" placeholder="Notes (e.g.I want to order 2 quantities of the Totoro Plushie.)"></textarea>
+                <textarea id="order_notes" name="order_notes" placeholder="Notes (e.g. I want to order 2 quantities of the Totoro Plushie.)"></textarea>
             </div>
 
             <h3>Shipping Address</h3>
             <div class="two-columns">
-                <input type="text" placeholder="House No." required>
-                <input type="text" placeholder="Street" required>
+                <input type="text" name="house_no" placeholder="House No." required>
+                <input type="text" name="street" placeholder="Street" required>
             </div>
 
             <div class="two-columns">
-                <input type="text" placeholder="Barangay" required>
-                <input type="text" placeholder="City" required>
+                <input type="text" name="barangay" placeholder="Barangay" required>
+                <input type="text" name="city" placeholder="City" required>
             </div>
 
             <div class="two-columns">
-                <input type="text" placeholder="Province" required>
-                <input type="text" placeholder="Zip Code" required>
+                <input type="text" name="province" placeholder="Province" required>
+                <input type="text" name="zip_code" placeholder="Zip Code" required>
             </div>
 
-            <input type="text" placeholder="Country" required>
+            <input type="text" name="country" placeholder="Country" required>
 
             <div class="form-buttons">
-                <input type="reset" value="Cancel" />
-                <input type="submit" value="Submit" />
+                <input type="reset" value="Cancel">
+                <input type="submit" value="Submit">
             </div>
         </form>
     </main>
@@ -146,8 +150,8 @@
     <footer>
         <p>&copy; 2025 The Plushie Corner. All Rights Reserved.</p>
         <div class="social-links">
-            <a href="www.facebook.com/christructure"><img src="instagram-icon.png" alt="Instagram"></a>
-            <a href="www.instagram.com/christructure"><img src="facebook-icon.png" alt="Facebook"></a>
+            <a href="https://www.facebook.com/christructure" target="_blank" rel="noopener noreferrer"><img src="images/facebook-logo.png" alt="Instagram"></a>
+            <a href="https://www.instagram.com/christructure" target="_blank" rel="noopener noreferrer"><img src="images/instagram-logo.png" alt="Facebook"></a>
         </div>
     </footer>
     <script src="script.js"></script>
