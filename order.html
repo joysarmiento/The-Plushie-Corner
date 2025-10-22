@@ -21,124 +21,135 @@
 </head>
 
 <body>
-    <div id="container">
-        <nav class="main-nav">
+    <div class="page-overlay"></div>
+    
+    <nav class="main-nav">
+        <div>
+            <a href="home.html">
+                <img src="images/plushie-corner-logo.png" alt="Plushie Corner Logo"/>
+            </a>
+        </div>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul class="nav-menu">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="order.html">Order Form</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+        <h1>Order Form</h1>
+        <p>Ready to bring home your new plushie friend? Just fill out the form below with your details and order information, and I'll prepare your handmade plush with love and care.</p>
+    </header>
+    
+    <main>
+        <section id="notes">
+            <h2>Important Notes</h2>
+            <p>before ordering</p>
             <ul>
-                <li><a href="home.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="shop.html">Shop</a></li>
-                <li><a href="order.html">Order Form</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
+                <li>You will receive a confirmation reply/email within 24-48 hours, which includes your order summary and payment details.</li>
+                <li>Payments can be made via GCash, bank transfer, etc.</li>
+                <li>Because each plush is handmade, please allow [3-7 days] for crafting and preparation before shipping.</li>
+                <li>We'll notify you once your order has been shipped, along with a tracking number if available.</li>
             </ul>
-        </nav>
+        </section>
 
-        <header class="hero">
-            <h1>Order Form</h1>
-            <p>Ready to bring home your new plushie friend? Just fill out the form below with your details and order information, and I'll prepare your handmade plush with love and care.</p>
-        </header>
-        
-        <main>
-            <section id="notes">
-                <h2>Important Notes</h2>
-                <p>before ordering</p>
-                <ul>
-                    <li>You will receive a confirmation reply/email within 24-48 hours, which includes your order summary and payment details.</li>
-                    <li>Payments can be made via GCash, bank transfer, etc.</li>
-                    <li>Because each plush is handmade, please allow [3-7 days] for crafting and preparation before shipping.</li>
-                    <li>We'll notify you once your order has been shipped, along with a tracking number if available.</li>
-                </ul>
-            </section>
-
-            <form id="order-form" action="YOUR_SCRIPT_LINK_HERE" method="POST">
-                <h3>Customer Info</h3>
-                <input type="text" placeholder="First Name" required>
-                <input type="text" placeholder="Last Name" required>
-                
-                <div class="two-columns">
-                    <input type="email" placeholder="Email" required>
-                    <input type="tel" placeholder="Phone Number" required>
-                </div>
-
-                <h3>Order Details</h3>
-                <div class="formRow"> 
-                    <label>Choose your plushie order (select all that apply):</label>
-                    <fieldset>
-                        <legend><strong>Limited Edition</strong></legend>
-                        <label><input type="checkbox" name="order" value="Brown Cow Plushie"> Brown Cow Plushie</label><br>
-                        <label><input type="checkbox" name="order" value="Ratatouille Plushie"> Ratatouille Plushie</label><br>
-                        <label><input type="checkbox" name="order" value="Totoro Plushie"> Totoro Plushie</label><br>
-                        <label><input type="checkbox" name="order" value="Teddy Plushie"> Teddy Plushie</label>
-                    </fieldset>
-
-                    <fieldset>
-                        <legend><strong>Bunny Plushies</strong></legend>
-                        <label><input type="checkbox" name="order" value="HoneyBun Plushie"> HoneyBun Plushie</label><br>
-                        <label><input type="checkbox" name="order" value="Poppy Plushie"> Poppy Plushie</label><br>
-                        <label><input type="checkbox" name="order" value="Froggie Hops Plushie"> Froggie Hops Plushie</label><br>
-                        <label><input type="checkbox" name="order" value="SnuggleCub Plushie"> SnuggleCub Plushie</label><br>
-                        <label><input type="checkbox" name="order" value="Moonlight Plushie"> Moonlight Plushie</label><br>
-                        <label><input type="checkbox" name="order" value="Pearl Bunny Plushie"> Pearl Bunny Plushie</label><br>
-                        <label><input type="checkbox" name="order" value="FinBunny Plushie"> FinBunny Plushie</label><br>
-                        <label><input type="checkbox" name="order" value="LoFi Bunny Plushie"> LoFi Bunny Plushie</label>
-                    </fieldset>
-
-                    <fieldset>
-                        <legend><strong>Bear Plushies</strong></legend>
-                        <label><input type="checkbox" name="order" value="SonicHug Plushie"> SonicHug Plushie</label><br>
-                        <label><input type="checkbox" name="order" value="Sunny Plushie"> Sunny Plushie</label><br>
-                        <label><input type="checkbox" name="order" value="GlazyBear Plushie"> GlazyBear Plushie</label><br>
-                        <label><input type="checkbox" name="order" value="Blush Bow Plushie"> Blush Bow Plushie</label><br>
-                        <label><input type="checkbox" name="order" value="Urban Groove Plushie"> Urban Groove Plushie</label><br>
-                        <label><input type="checkbox" name="order" value="MilkChoco Plushie"> MilkChoco Plushie</label><br>
-                        <label><input type="checkbox" name="order" value="SnowTie Plushie"> SnowTie Plushie</label><br>
-                        <label><input type="checkbox" name="order" value="Moon & Tide Plushie"> Moon & Tide Plushie</label>
-                    </fieldset>
-                </div>
-                <div class="quantity-input-container">
-                    <label for="product_quantity">Quantity for each plushie:</label>
-                    <div class="quantity-controls">
-                        <button type="button" class="minus-button" aria-label="Decrease quantity">&minus;</button>
-                        <input type="number" class="quantity-input" value="1" min="1" max="50" name="product_quantity">
-                        <button type="button" class="plus-button" aria-label="Increase quantity">&plus;</button>
-                    </div>
-                </div>
-                <div class="textarea-container">
-                    <label for="order_notes">Special Instructions:</label>
-                    <textarea id="order_notes" name="order_notes" placeholder="Notes (e.g.I want to order 2 quantities of the Totoro Plushie.)"></textarea>
-                </div>
-
-                <h3>Shipping Address</h3>
-                <div class="two-columns">
-    <input type="text" placeholder="House No." required>
-    <input type="text" placeholder="Street" required>
-</div>
-
-<!-- Second row: Barangay and City -->
-<div class="two-columns">
-    <input type="text" placeholder="Barangay" required>
-    <input type="text" placeholder="City" required>
-</div>
-
-<!-- Third row: Province and Zip Code -->
-<div class="two-columns">
-    <input type="text" placeholder="Province" required>
-    <input type="text" placeholder="Zip Code" required>
-</div>
-
-<!-- Single row: Country -->
-<input type="text" placeholder="Country" required>
-
-                <button type="submit">Submit</button>
-            </form>
-        </main>
-
-        <footer>
-            <p>&copy; 2025 The Plushie Corner. All Rights Reserved.</p>
-            <div class="social-links">
-                <a href="www.facebook.com/christructure"><img src="instagram-icon.png" alt="Instagram"></a>
-                <a href="www.instagram.com/christructure"><img src="facebook-icon.png" alt="Facebook"></a>
+        <form id="order-form" action="YOUR_SCRIPT_LINK_HERE" method="POST">
+            <h3>Customer Info</h3>
+            <input type="text" placeholder="First Name" required>
+            <input type="text" placeholder="Last Name" required>
+            
+            <div class="two-columns">
+                <input type="email" placeholder="Email" required>
+                <input type="tel" placeholder="Phone Number" required>
             </div>
-        </footer>
-    </div>
+
+            <h3>Order Details</h3>
+            <div class="formRow"> 
+                <label>Choose your plushie order (select all that apply):</label>
+                <fieldset>
+                    <legend><strong>Limited Edition</strong></legend>
+                    <label><input type="checkbox" name="order" value="Brown Cow Plushie"> Brown Cow Plushie</label><br>
+                    <label><input type="checkbox" name="order" value="Ratatouille Plushie"> Ratatouille Plushie</label><br>
+                    <label><input type="checkbox" name="order" value="Totoro Plushie"> Totoro Plushie</label><br>
+                    <label><input type="checkbox" name="order" value="Teddy Plushie"> Teddy Plushie</label>
+                </fieldset>
+
+                <fieldset>
+                    <legend><strong>Bunny Plushies</strong></legend>
+                    <label><input type="checkbox" name="order" value="HoneyBun Plushie"> HoneyBun Plushie</label><br>
+                    <label><input type="checkbox" name="order" value="Poppy Plushie"> Poppy Plushie</label><br>
+                    <label><input type="checkbox" name="order" value="Froggie Hops Plushie"> Froggie Hops Plushie</label><br>
+                    <label><input type="checkbox" name="order" value="SnuggleCub Plushie"> SnuggleCub Plushie</label><br>
+                    <label><input type="checkbox" name="order" value="Moonlight Plushie"> Moonlight Plushie</label><br>
+                    <label><input type="checkbox" name="order" value="Pearl Bunny Plushie"> Pearl Bunny Plushie</label><br>
+                    <label><input type="checkbox" name="order" value="FinBunny Plushie"> FinBunny Plushie</label><br>
+                    <label><input type="checkbox" name="order" value="LoFi Bunny Plushie"> LoFi Bunny Plushie</label>
+                </fieldset>
+
+                <fieldset>
+                    <legend><strong>Bear Plushies</strong></legend>
+                    <label><input type="checkbox" name="order" value="SonicHug Plushie"> SonicHug Plushie</label><br>
+                    <label><input type="checkbox" name="order" value="Sunny Plushie"> Sunny Plushie</label><br>
+                    <label><input type="checkbox" name="order" value="GlazyBear Plushie"> GlazyBear Plushie</label><br>
+                    <label><input type="checkbox" name="order" value="Blush Bow Plushie"> Blush Bow Plushie</label><br>
+                    <label><input type="checkbox" name="order" value="Urban Groove Plushie"> Urban Groove Plushie</label><br>
+                    <label><input type="checkbox" name="order" value="MilkChoco Plushie" class="print"> MilkChoco Plushie</label><br>
+                    <label><input type="checkbox" name="order" value="SnowTie Plushie"> SnowTie Plushie</label><br>
+                    <label><input type="checkbox" name="order" value="Moon & Tide Plushie"> Moon & Tide Plushie</label>
+                </fieldset>
+            </div>
+            <div class="quantity-input-container">
+                <label for="product_quantity">Quantity for each plushie:</label>
+                <div class="quantity-controls">
+                    <button type="button" class="minus-button" aria-label="Decrease quantity">&minus;</button>
+                    <input type="number" class="quantity-input" value="1" min="1" max="50" name="product_quantity">
+                    <button type="button" class="plus-button" aria-label="Increase quantity">&plus;</button>
+                </div>
+            </div>
+            <div class="textarea-container">
+                <label for="order_notes">Special Instructions:</label>
+                <textarea id="order_notes" name="order_notes" placeholder="Notes (e.g.I want to order 2 quantities of the Totoro Plushie.)"></textarea>
+            </div>
+
+            <h3>Shipping Address</h3>
+            <div class="two-columns">
+                <input type="text" placeholder="House No." required>
+                <input type="text" placeholder="Street" required>
+            </div>
+
+            <div class="two-columns">
+                <input type="text" placeholder="Barangay" required>
+                <input type="text" placeholder="City" required>
+            </div>
+
+            <div class="two-columns">
+                <input type="text" placeholder="Province" required>
+                <input type="text" placeholder="Zip Code" required>
+            </div>
+
+            <input type="text" placeholder="Country" required>
+
+            <div class="form-buttons">
+                <input type="reset" value="Cancel" />
+                <input type="submit" value="Submit" />
+            </div>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 The Plushie Corner. All Rights Reserved.</p>
+        <div class="social-links">
+            <a href="www.facebook.com/christructure"><img src="instagram-icon.png" alt="Instagram"></a>
+            <a href="www.instagram.com/christructure"><img src="facebook-icon.png" alt="Facebook"></a>
+        </div>
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
