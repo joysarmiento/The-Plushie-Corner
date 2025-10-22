@@ -623,10 +623,9 @@ cite {
     background: url('images/header-1.png') no-repeat center center;
     background-size: cover;
     color: var(--color-text-white);
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 22vw 6vw;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 16vw 6vw;
 }
 
 .hero::before {
