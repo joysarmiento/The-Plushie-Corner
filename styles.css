@@ -681,12 +681,12 @@ cite {
 }
 
 #notes ul {
+    font-size: 1.2rem;
     text-align: left;
     list-style-type: disc;
     display: inline-block;
     margin: 0 auto;
-    padding-left: 2rem;
-    max-width: 100%;
+    max-width: 70%;
     color: var(--color-green-dark);
     text-shadow: 2px 1px 3px var(--color-shadow-text-green);
 }
@@ -1252,6 +1252,11 @@ footer p {
         font-size: 1rem;
     }
 
+    #notes ul {
+        font-size: 1rem;
+        max-width: 90%;
+    }
+
 /* TABLET VIEWPORT  |  ORDER: CSS styles for form */
     form#order-form {
         max-width: 600px;
@@ -1712,9 +1717,14 @@ footer p {
         font-size: 0.9rem;
     }
 
+    #notes ul {
+        font-size: 0.9rem;
+        max-width: 90%;
+    }
+
 /* MOBILE VIEWPORT  |  ORDER: CSS styles for form */
     form#order-form {
-        max-width: 365px;
+        max-width: 90%;
         padding: 1.5rem;
     }
 
