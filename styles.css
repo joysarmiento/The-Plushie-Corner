@@ -584,6 +584,23 @@ cite {
     border: 3.5px solid var(--color-green-dark);
 }
 
+#limited .product,
+#bunny .product,
+#bear .product {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    padding: 10px; 
+    box-sizing: border-box;
+}
+
+#limited .product:hover,
+#bunny .product:hover,
+#bear .product:hover {
+    transform: scale(1.05);
+    border-radius: 10px;
+    box-shadow: 0 0 25px rgba(122, 150, 48, 12);
+}
+
 #limited .product h4,
 #bunny .product h4,
 #bear .product h4, 
@@ -1673,9 +1690,27 @@ footer p {
     #bunny .product-grid,
     #bear .product-grid{
         display: grid;
-        grid-template-columns: repeat(2, 150px);
+        grid-template-columns: repeat(2, 170px);
+        gap: 1px;
         font-size: 0.85rem;
         row-gap: 20px;
+    }
+
+    #limited .product,
+    #bunny .product,
+    #bear .product {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        cursor: pointer;
+        padding: 10px; 
+        box-sizing: border-box;
+    }
+
+    #limited .product:hover,
+    #bunny .product:hover,
+    #bear .product:hover {
+        transform: scale(1.05);
+        border-radius: 10px;
+        box-shadow: 0 0 25px rgba(122, 150, 48, 12);
     }
 
     .product.style-a.border-style-a.mobile img {
