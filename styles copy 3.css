@@ -189,10 +189,53 @@ h1, h2, h3 {
 .product-grid {
     display: flex;
     justify-content: center;
+    grid-template-columns: repeat(2, 200px);
     flex-wrap: wrap;
-    gap: 25px;
-    margin-bottom: 20px;
 }
+
+/* .product {
+    text-align: center;
+    width: 240px;
+    padding: 20px;
+}
+
+.product.style-a img{
+    width: 100%;
+    border-bottom-left-radius: 55px;
+    border-top-right-radius: 55px;
+    border: 3.5px solid var(--color-green-light);
+}
+
+.product.style-b img{
+    width: 100%;
+    border-top-left-radius: 55px;
+    border-top-right-radius: 55px;
+    border: 3.5px solid var(--color-green-dark);
+}
+
+.product.style-c img{
+    width: 100%;
+    border-top-left-radius: 55px;
+    border-bottom-right-radius: 55px;
+    border: 3.5px solid var(--color-green-light);
+}
+
+.product.style-a.border-style-a img {
+    border: 3.5px solid var(--color-green-dark);
+}
+
+.product.style-b.border-style-b img {
+    border: 3.5px solid var(--color-green-light);
+}
+
+.product h3 {
+    margin: 10px 0.5px;
+    font-size: 1.2rem;
+}
+
+.product p {
+    text-shadow: 1px 1px 10px var(--color-shadow-text-green);
+} */
 
 figure.product {
     text-align: center;
@@ -982,8 +1025,7 @@ footer p {
 
     .product-grid {
         display: grid;
-        gap: 5px;
-        grid-template-columns: repeat(2, 210px);
+        gap: 40px;
     }
 
     figure.product {
@@ -1395,14 +1437,14 @@ footer p {
 
     .product-grid {
         display: grid;
-        gap: 3px;
-        grid-template-columns: repeat(2, 165px);
-        font-size: 0.85rem;
+        gap: 5px;
+        grid-template-columns: repeat(2, 160px);
+        font-size: 0.9rem;
         margin-bottom: 8px;
     }
 
     figure.product {
-        width: 165px;
+        width: 160px;
         padding: 8px;
     }
 
@@ -1564,15 +1606,16 @@ footer p {
     #bunny h2,
     #bear h2 {
         font-size: 1.8rem;
+        padding: 0;
     }
 
     #limited .product-grid,
     #bunny .product-grid,
     #bear .product-grid{
         display: grid;
-        grid-template-columns: repeat(2, 150px);
+        gap: 3px;
+        grid-template-columns: repeat(2, 170px);
         font-size: 0.85rem;
-        row-gap: 20px;
     }
 
     .product.style-a.border-style-a.mobile img {
